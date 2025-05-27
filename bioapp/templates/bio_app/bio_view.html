@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Biography</title>
+</head>
+<body>
+    <h1>Your Biography</h1>
+    <h2>{{ bio.full_name }}</h2>
+    <p><strong>Age:</strong> {{ bio.age }}</p>
+    <p><strong>Profession:</strong> {{ bio.profession }}</p>
+    <p><strong>Short Bio:</strong> {{ bio.short_bio }}</p>
+    <p><strong>Hobbies:</strong> {{ bio.hobbies }}</p>
+    <a href="{% url 'bio:create' %}">Create another bio</a>
+</body>
+</html>
