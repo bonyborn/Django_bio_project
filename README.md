@@ -24,8 +24,8 @@ This project is built using Django and demonstrates how to:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/bonyborn/django-bio-app.git
-   cd django-bio-app
+   git clone https://github.com/bonyborn/django_bio_app.git
+   cd django_bio_app
 
 ##Setup Virtualenvironment
 
