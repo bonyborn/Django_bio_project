@@ -62,5 +62,6 @@ This project is built using Django and demonstrates how to:
 Author
 
 Boniface Muvea
+GitHub:
 
-    GitHub: bonyborn
+    bonyborn
