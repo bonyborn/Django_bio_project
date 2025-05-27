@@ -23,45 +23,32 @@ This project is built using Django and demonstrates how to:
 ## Installation
 
 1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/bonyborn/django-bio-app.git
-   cd django-bio-app
+   git clone https://github.com/bonyborn/django_bio_app.git
+   cd django_bio_app
 
-##Setup Virtualenvironment
+2. **Setup Virtual Environment**
+   python -m venv venv
+   venv\Scripts\activate
 
-     python -m venv venv
-     venv\Scripts\activate
-##Install Dependancies
+3. **Install Dependencies**
+   pip install django
+   pip install -r requirements.txt
 
-    pip install django
+   Create a requirements.txt using:
+   pip freeze > requirements.txt
 
-    pip install -r requirements.txt
+4. **Run Migrations**
+   python manage.py migrate
 
-> Create a requirements.txt using:
+5. **Start Development Server**
+   python manage.py runserver
 
-    pip freeze > requirements.txt
+## Access the App
 
+- Create your bio: http://127.0.0.1:8000/bio/create/
+- View your bio: http://127.0.0.1:8000/bio/view/
 
-##Run Migrations
+## Author
 
-    python manage.py migrate
-    
-##Start Development Server
-
-    python manage.py runserver
-    
-##Access the App
-
--Create your bio: http://127.0.0.1:8000/bio/create/
-
--View your bio: http://127.0.0.1:8000/bio/view/
-
-
-
-
-Author
-
-Boniface Muvea
-GitHub:
-
-    bonyborn
+Boniface Muvea  
+GitHub: bonyborn
