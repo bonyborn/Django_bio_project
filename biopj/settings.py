@@ -121,7 +121,10 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:8000",
+    "https://localhost:8000",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.x/ref/settings/#default-auto-field

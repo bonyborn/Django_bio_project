@@ -13,5 +13,5 @@ def create_bio(request):
     return render(request, 'bioapp/bio_form.html', {'form': form})
 
 def view_bio(request):
-    bios = Bio.objects.all()
-    return render(request, 'bioapp/bio_view.html', {'bios': bios})
+    bio = Bio.objects.last()
+    return render(request, 'bioapp/bio_view.html', {'bio': bio})
