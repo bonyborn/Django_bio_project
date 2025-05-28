@@ -10,8 +10,8 @@ def create_bio(request):
             return redirect('view_bio')
     else:
         form = BioForm()
-    return render(request, 'bio_app/bio_form.html', {'form': form})
+    return render(request, 'bioapp/bio_form.html', {'form': form})
 
 def view_bio(request):
     bios = Bio.objects.all()
-    return render(request, 'bio_app/bio_view.html', {'bios': bios})
+    return render(request, 'bioapp/bio_view.html', {'bios': bios})
