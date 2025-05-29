@@ -23,8 +23,8 @@ This project is built using Django and demonstrates how to:
 ## Installation
 
 1. **Clone the Repository**
-   git clone https://github.com/bonyborn/django_bio_app.git
-   cd django_bio_app
+   git clone https://github.com/bonyborn/Django_bio_project.git
+   cd Django_bio_project
 
 2. **Setup Virtual Environment**
    python -m venv venv
