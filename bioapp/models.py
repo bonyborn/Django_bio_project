@@ -7,5 +7,6 @@ class Bio(models.Model):
     short_bio = models.TextField()
     hobbies = models.TextField()
 
+
     def __str__(self):
         return self.full_name

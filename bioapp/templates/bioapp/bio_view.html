@@ -4,13 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Biography</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 32px;
+        }
+        h1 {
+            color: #2d3a4b;
+            text-align: center;
+        }
+        .bio-section {
+            margin-bottom: 24px;
+        }
+        .bio-label {
+            font-weight: bold;
+            color: #555;
+        }
+        .nav {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #3498db;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Your Biography</h1>
-    <h2>{{ bio.full_name }}</h2>
-    <p><strong>Age:</strong> {{ bio.age }}</p>
-    <p><strong>Profession:</strong> {{ bio.profession }}</p>
-    <p><strong>Short Bio:</strong> {{ bio.short_bio }}</p>
-    <p><strong>Hobbies:</strong> {{ bio.hobbies }}</p>
+    <div class="container">
+        <div class="nav">
+            <a href="{% url 'create_bio' %}">Create Bio</a>
+            <a href="{% url 'view_bio' %}">View Bio</a>
+        </div>
+        <h1>Your Biography</h1>
+        {% for bio in bios %}
+        <div class="bio-section">
+            <h2>{{ bio.full_name }}</h2>
+            <p><span class="bio-label">Age:</span> {{ bio.age }}</p>
+            <p><span class="bio-label">Profession:</span> {{ bio.profession }}</p>
+            <p><span class="bio-label">Short Bio:</span> {{ bio.short_bio }}</p>
+            <p><span class="bio-label">Hobbies:</span> {{ bio.hobbies }}</p>
+        </div>
+        {% empty %}
+        <p>No bio found. <a href="{% url 'create_bio' %}">Create one now</a>.</p>
+        {% endfor %}
+    </div>
 </body>
 </html>

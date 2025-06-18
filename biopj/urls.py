@@ -3,6 +3,12 @@ from django.urls import path, include
 from bioapp import views
 from django.conf import settings
 from django.conf.urls.static import static
+ 
+#costomized admin site
+ admin.site.site_header = "BioApp Admin"
+ admin.site.site_tittle= "BioApp Admin Portal"
+ admin.site.index_tittle="Welcome to BioApp Admin"
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
