@@ -55,10 +55,10 @@
         {% for bio in bios %}
         <div class="bio-section">
             <h2>{{ bio.full_name }}</h2>
-            <p><span class="bio-label">Age:</span> {{ bio.age }}</p>
-            <p><span class="bio-label">Profession:</span> {{ bio.profession }}</p>
-            <p><span class="bio-label">Short Bio:</span> {{ bio.short_bio }}</p>
-            <p><span class="bio-label">Hobbies:</span> {{ bio.hobbies }}</p>
+            <p><span class="bio-label"><strong>Age:</strong></span> {{ bio.age }}</p>
+            <p><span class="bio-label"><strong>Profession:</strong></span> {{ bio.profession }}</p>
+            <p><span class="bio-label"><strong>Bio:</strong></span> {{ bio.short_bio }}</p>
+            <p><span class="bio-label"><Stong>Hobbies:</Stong></span> {{ bio.hobbies }}</p>
         </div>
         {% empty %}
         <p>No bio found. <a href="{% url 'create_bio' %}">Create one now</a>.</p>
